@@ -6,7 +6,7 @@ import VideoList from "../VideoList/VideoList";
 import VideoDetail from "../VideoDetail/VideoDetail";
 
 class App extends React.Component {
-  state = { videos: [], selectedVideo: null, isLoading: true };
+  state = { videos: [], selectedVideo: null };
 
   onSubmit = async (e, searchQuery) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ class App extends React.Component {
   };
 
   onVideoSelect = (video) => {
-    this.setState({ selectedVideo: video, isLoading: false });
+    this.setState({ selectedVideo: video });
   };
 
   render() {

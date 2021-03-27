@@ -2,12 +2,9 @@ import React from "react";
 
 class VideoDetail extends React.Component {
   render() {
-    if (this.props.isLoading) {
-      return (
-        <h2>Loading . . .</h2>
-      );
+    if (!this.props.video) {
+      return <h2>Loading . . .</h2>;
     }
-
     const videoSource = `https://www.youtube.com/embed/${this.props.video.id.videoId}`;
 
     return (
